@@ -8,7 +8,7 @@ int main()
     int  number;
     int sum;
     cin >> number;
-    for(int a = number; a != 0; a2 /= 10 ){
+    for(int a = number; a != 0; a /= 10 ){
         sum += a % 10;
     }
     cout << "Sum of your numers is: " << sum;
