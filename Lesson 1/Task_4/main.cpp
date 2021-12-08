@@ -13,10 +13,13 @@ int main()
     double x2 = 0;
     cout << "Enter numbers for ax^2+bx-c=0" << endl;
     cout << "Let's solve for this formula  ->  D=b^2-4ac"<< endl;
+    cout << "a: ";
     cin >> a;
+    cout << "b: ";
     cin >> b;
+    cout << "c: ";
     cin >> c;
-    D = b*b - 4*a*(-c);
+    D = b*b - 4*a*c;
     if  (D < 0)
     {
         cout << "there are no roots";
