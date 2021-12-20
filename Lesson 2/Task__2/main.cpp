@@ -9,24 +9,22 @@ int main()
     cout << "Enter - ";
     cin >> number;
     int helper = -1;
-    int sum = 0;
+    int chislo = 0;
     int suma = 0;
     for(int n = number; n > 0; n /= 10)
     {
         if(n % 2 == 0)
         {
+            int lastNumber = n % 10;
             helper += 1;
-            sum += (n % 10) * pow(10, helper);
+            chislo += lastNumber * pow(10, helper);
+            if(lastNumber % 3 == 0)
+            {
+                suma += lastNumber;
+            }
         }
     }
-    for(int i = sum; i > 0; i /= 10)
-    {
-        if((i % 10)% 3 == 0)
-        {
-            suma += i % 10;
-        }
-    }
-    cout << sum << endl;
-    cout << "\nSum - " << suma;
+    cout << "Odd numbers - " << chislo << endl << endl;
+    cout << "Sum - " << suma;
     return 0;
 }
