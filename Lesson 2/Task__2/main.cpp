@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int number;
-    cout << "Enter - ";
+    cout << "Enter your number - ";
     cin >> number;
     int helper = -1;
     int chislo = 0;
@@ -25,6 +25,6 @@ int main()
         }
     }
     cout << "Odd numbers - " << chislo << endl << endl;
-    cout << "Sum - " << suma;
+    cout << "Sum (Odd number/3 = 0) - " << suma;
     return 0;
 }
