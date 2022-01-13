@@ -6,14 +6,15 @@ using namespace std;
 
 int main()
 {
-    int plusovat = 0, minusovat = 0,enter = -1, pin = 0, password[10] = {1337, 2228, 1234, 8000, 1111, 2696, 3993, 4564, 9876, 1973}, money[10] = {500, 1500, 0, 0, 0, 0, 0, 0, 0, 0};
+    int plusovat = 0, minusovat = 0,enter = -1, pin = 0, password[10] = {1337, 2228, 1234, 8000, 1111, 2696, 3993, 4564, 9876, 1973}, money[10] = {500, 1500, 777, 1, 0, 1234, 0, 8888, 1000000, 0};
     while(true)
     {
+
         char dijital = ' ';
         do
         {
-        cout << "Bank account: "; cin >> enter; cout << endl;
-        enter--;
+            cout << "Bank account: "; cin >> enter; cout << endl;
+            enter--;
         } while(enter < 0 || enter > 9);
         while(dijital != 's')
         {
@@ -24,7 +25,7 @@ int main()
                 system("pause");
                 system("cls");
                 cout << "Bank account: " << enter + 1 << endl << endl;
-            continue;
+                continue;
             }
             system("cls");
             while(dijital != 's')
@@ -39,7 +40,7 @@ int main()
                 {
                     do
                     {
-                        cout << "Enter you sum want to add: ";
+                        cout << "Enter your sum want to add: ";
                         cin >> plusovat;
                         system("cls");
                         cout << "Your money: " << money[enter] << " $" << endl;
@@ -62,10 +63,19 @@ int main()
                     }
                     do
                     {
-                        cout << "Enter you sum want to withdraw: ";
+                        cout << "Enter your sum want to withdraw: ";
                         cin >> minusovat;
+                        if(minusovat > money[enter] || minusovat <= -1)
+                        {
+                            cout << "ERROR!!!" << endl;
+                            system("pause");
+                            system("cls");
+                            minusovat = 0;
+
+                            continue;
+                        }
                         system("cls");
-                    } while(minusovat < 0);
+                    } while(minusovat >= money[enter]);
                     money[enter] -= minusovat;
                 }
                 else system("cls"); continue;
