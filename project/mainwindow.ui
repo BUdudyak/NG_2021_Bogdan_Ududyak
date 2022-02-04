@@ -31,7 +31,7 @@
          <item>
           <widget class="QCheckBox" name="cb_settings">
            <property name="text">
-            <string>Show project</string>
+            <string>Html Preview</string>
            </property>
           </widget>
          </item>
@@ -48,13 +48,6 @@
            </property>
           </spacer>
          </item>
-         <item>
-          <widget class="QPushButton" name="b_sender">
-           <property name="text">
-            <string>...</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </item>
        <item>
@@ -68,9 +61,6 @@
         </widget>
        </item>
       </layout>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="te_getter"/>
      </item>
      <item>
       <widget class="QTextBrowser" name="tb_getter">

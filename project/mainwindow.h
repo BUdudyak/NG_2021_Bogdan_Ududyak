@@ -17,11 +17,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QComboBox *comboBox;
 
 private slots:
     void fsender();
     void on_cb_settings_stateChanged();
+    void onTextChanged();
 
 private:
     Ui::MainWindow *ui;
