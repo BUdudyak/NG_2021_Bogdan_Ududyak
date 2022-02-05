@@ -20,7 +20,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::onTextChanged()
 {
-    ui->tb_getter->setHtml(ui->te_text->toHtml());
+    QString html = (ui->te_text->toPlainText().toUtf8());
+    ui->tb_getter->setHtml(html);
 }
 
 void MainWindow::on_cb_settings_stateChanged()
